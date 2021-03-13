@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "89c4e00b-a29e-434b-96ac-ae7397967f5b",
+		"name": "proyectoFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Luis",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "luis@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiUser/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiUser",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loguear Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Luis",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "getToken",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiUser/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiUser",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loguear Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "getToken",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiUser/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiUser",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTU1OTEyNDAsImV4cCI6MTYxNjAyMzI0MH0.-VVXCknIM0n8HahuFY4oXsp9WWkDgO1E7ZrfqNer5Ls",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idUsuario",
+							"value": "604bf6d2beeb7e3af8d8712c",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "Maria",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "maria@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiUser/editUsuario/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiUser",
+						"editUsuario",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTU1OTEyNDAsImV4cCI6MTYxNjAyMzI0MH0.-VVXCknIM0n8HahuFY4oXsp9WWkDgO1E7ZrfqNer5Ls",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idUsuario",
+							"value": "604bf6d2beeb7e3af8d8712c",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiUser/deleteUsuario/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiUser",
+						"deleteUsuario",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTU1OTEyNDAsImV4cCI6MTYxNjAyMzI0MH0.-VVXCknIM0n8HahuFY4oXsp9WWkDgO1E7ZrfqNer5Ls",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Verduras",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Verduras de la granja",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiCategory/createCategory/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiCategory",
+						"createCategory",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTUwNjM2NzQsImV4cCI6MTYxNTQwOTI3NH0.9Ff9qebfSztJSSkGFISM7mZo2KV4MZS14FWKYyXH8Lk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idCategoria",
+							"value": "6044259a2d17ba49b4bb220b",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "lacteos",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "yougurt, queso, leche",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiCategory/editCategory/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiCategory",
+						"editCategory",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTU1OTEyNDAsImV4cCI6MTYxNjAyMzI0MH0.-VVXCknIM0n8HahuFY4oXsp9WWkDgO1E7ZrfqNer5Ls",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Durazno",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "durazno guatemalteco",
+							"type": "text"
+						},
+						{
+							"key": "categoria",
+							"value": "60446f81879bb90f18f8a320",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiProduct/createProduct/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiProduct",
+						"createProduct",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTU2MTEzNDksImV4cCI6MTYxNjA0MzM0OX0.EEyy0KAekjp9ptxhOyQVEe29jV_YnAlCtkdvcBAogcY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idProducto",
+							"value": "604c2f134e5d40444c079cb5",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "naranjas",
+							"type": "text"
+						},
+						{
+							"key": "categoria",
+							"value": "604c4597db7e585a5c44e27f",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiProduct/editProduct/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiProduct",
+						"editProduct",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTUwNjM2NzQsImV4cCI6MTYxNTQwOTI3NH0.9Ff9qebfSztJSSkGFISM7mZo2KV4MZS14FWKYyXH8Lk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idProducto",
+							"value": "604465eb479e5d69e4b52a5a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiProduct/deleteProduct/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiProduct",
+						"deleteProduct",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTU2MTEzNDksImV4cCI6MTYxNjA0MzM0OX0.EEyy0KAekjp9ptxhOyQVEe29jV_YnAlCtkdvcBAogcY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idCategoria",
+							"value": "604c4597db7e585a5c44e27f",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiCategory/deleteCategory/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiCategory",
+						"deleteCategory",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Producto Nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDQxY2M5MGY5OWMyZDVjMjQ2MGQ2NTIiLCJ1c3VhcmlvIjoiQWRtaW4iLCJyb2wiOiJyb2xfQWRtaW4iLCJpYXQiOjE2MTUyNDUyMjYsImV4cCI6MTYxNjAyMjgyNn0.rGoZAA8flMTxPruYp5Ff6pg3zHbh9MfltznzI3FvPRg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Durazno",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiProduct/searchProductName/6041cc90f99c2d5c2460d652",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiProduct",
+						"searchProductName",
+						"6041cc90f99c2d5c2460d652"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopping Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRiZmNlN2JlZWI3ZTNhZjhkODcxMmQiLCJ1c3VhcmlvIjoiTHVpcyIsImVtYWlsIjoibHVpc0BnbWFpbC5jb20iLCJyb2wiOiJyb2xfQ2xpZW50ZSIsImlhdCI6MTYxNTYwNDY5OSwiZXhwIjoxNjE2MDM2Njk5fQ.omidWJskNv5nKgLXf2fVaEO6Jr5Pwl2IFz4bX-zZ-tA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "producto",
+							"value": "durazno ",
+							"type": "text"
+						},
+						{
+							"key": "cantidad ",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/apiUser/shoppingCart/604bfce7beeb7e3af8d8712d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"apiUser",
+						"shoppingCart",
+						"604bfce7beeb7e3af8d8712d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
